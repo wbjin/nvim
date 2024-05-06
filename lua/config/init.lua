@@ -16,6 +16,7 @@ opt.number = true
 opt.numberwidth = 2
 opt.ruler = false
 
+
 opt.signcolumn = "yes"
 opt.splitbelow = true
 opt.splitright = true

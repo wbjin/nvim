@@ -1,4 +1,4 @@
-cmp = require "cmp"
+local cmp = require "cmp"
 
 local cmp_ui = {
     icons = true,
