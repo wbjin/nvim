@@ -10,6 +10,7 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("v", "<", "<gv")
 map("v", ">", ">gv")
+map("v", "<leader>y", "*y")
 
 -- NvimTree --
 map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")

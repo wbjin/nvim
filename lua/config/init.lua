@@ -31,3 +31,5 @@ vim.cmd(":set colorcolumn=100")
 vim.cmd(":set wrap")
 
 vim.cmd(":set number")
+vim.cmd(":set clipboard=unnamedplus")
+vim.cmd(":set mouse=nicr")
