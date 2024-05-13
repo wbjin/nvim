@@ -47,3 +47,10 @@ map("n", "<leader>/",
         require("Comment.api").toggle.linewise.current()
     end)
 map("v", "<leader>/", "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>")
+
+-- Hop --
+map("n", "f", ":HopWord<CR>")
+vim.cmd("hi HopNextKey guifg=#ff9900")
+vim.cmd("hi HopNextKey1 guifg=#ff9900")
+vim.cmd("hi HopNextKey2 guifg=#ff9900")
+

@@ -11,6 +11,7 @@
   "distant.nvim": { "branch": "v0.3", "commit": "de7288b1af6fdb2d2e7a8aa00f07a236261c2491" },
   "fidget.nvim": { "branch": "main", "commit": "1ba38e4cbb24683973e00c2e36f53ae64da38ef5" },
   "friendly-snippets": { "branch": "main", "commit": "3e9a3f5a0cfcef1741e352c37bda4e82e5eb846a" },
+  "hop.nvim": { "branch": "master", "commit": "059e88e9dcaad3280ea1fd5c757f6904f274aed5" },
   "hydra.nvim": { "branch": "master", "commit": "55de54543d673824435930ecf533256eea2e565b" },
   "lazy.nvim": { "branch": "main", "commit": "d3974346b6cef2116c8e7b08423256a834cb7cbc" },
   "lualine.nvim": { "branch": "master", "commit": "0a5a66803c7407767b799067986b4dc3036e1983" },
