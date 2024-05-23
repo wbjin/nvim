@@ -76,6 +76,7 @@ local options = {
 
 return {
     "nvim-tree/nvim-tree.lua",
+    lazy=false,
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
     opts = options,
     config = function(_, opts)

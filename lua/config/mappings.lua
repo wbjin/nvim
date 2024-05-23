@@ -37,9 +37,10 @@ vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect T
 vim.keymap.set('n', '<leader>fs', builtin.grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>fw', builtin.live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
-vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
+vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[S]earch [R]esume' })
 vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+vim.keymap.set('n', '<leader>fb', ':Telescope current_buffer_fuzzy_find<CR>')
 
 -- Comments --
 map("n", "<leader>/", 
@@ -54,3 +55,4 @@ vim.cmd("hi HopNextKey guifg=#ff9900")
 vim.cmd("hi HopNextKey1 guifg=#ff9900")
 vim.cmd("hi HopNextKey2 guifg=#ff9900")
 
+-- LSP --

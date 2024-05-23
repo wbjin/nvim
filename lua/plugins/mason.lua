@@ -27,6 +27,7 @@ local options={
 
 return {
     "williamboman/mason.nvim",
+    lazy=false,
     cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
     opts = options,
     config = function(_, opts)
