@@ -8,6 +8,7 @@ map("n", "<C-h>", "<C-w>h")
 map("n", "<C-l>", "<C-w>l")
 map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
+map("n", "df", "<C-t><C-t>")
 map("v", "<", "<gv")
 map("v", ">", ">gv")
 map("v", "<leader>y", "*y")
@@ -41,6 +42,14 @@ vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[S]earch [R]esume' }
 vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', '<leader>fb', ':Telescope current_buffer_fuzzy_find<CR>')
+vim.keymap.set('n', '<leader>fy', 
+    function()
+        vim.cmd('normal! b')
+        vim.cmd('normal! yw')
+        local word = vim.fn.getreg('"'):gsub("%s+$", "")
+        builtin.grep_string({search = word})
+    end
+)
 
 -- Comments --
 map("n", "<leader>/", 

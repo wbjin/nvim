@@ -111,7 +111,17 @@ return {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         -- clangd = {},
-        -- -- gopls = {},
+        gopls = {
+                cmd = {"/Users/wonbinjin/go/bin/gopls"},
+              settings = {
+                gopls = {
+                  analyses = {
+                    unusedparams = true,
+                  },
+                  staticcheck = true,
+                },
+              },
+        },
         -- pyright = {},
         -- -- rust_analyzer = {},
         -- -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -137,7 +147,16 @@ return {
         --     },
         --   },
         -- },
-      }
+        rust_analyzer = {
+            settings = {
+                ["rust-analyzer"] = {
+                    server = {
+                        trace = "off",  -- Options are "off", "error", "warn", "info", "verbose"
+                    },
+                },
+            },
+        },
+      },
 
       -- Ensure the servers and tools above are installed
       --  To check the current status of installed tools and/or manually install
