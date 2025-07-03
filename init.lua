@@ -12,9 +12,6 @@ vim.env.Path = vim.fn.stdpath "data" .. "/mason/bin" .. (is_windows and "; " or 
 
 vim.cmd [[let $RUST_LOG="error"]]
 
-vim.o.wrap = true
-vim.o.linebreak = true
-
 require("lazy").setup({
     defaults = { lazy = false },
     spec = {
@@ -56,31 +53,43 @@ lspconfig.gopls.setup({
     },
 })
 
-local util = require('lspconfig/util')
-local path = util.path
+local function find_python_lib_dir(venv_root)
+  local handle = io.popen("find " .. venv_root .. "/lib -maxdepth 1 -type d -name 'python3.*'")
+  if handle then
+    local result = handle:read("*l")
+    handle:close()
+    return result
+  end
+end
+
+local cwd = vim.fn.getcwd()
+local venv_root = cwd .. "/.venv"  -- adjust if needed
+local python_path = venv_root .. "/bin/python"
+local python_lib = find_python_lib_dir(venv_root)
 
 lspconfig.pyright.setup({
-    settings = {
-        python = {
-            venvPath = vim.fn.getcwd() .. "/env/bin/python3",
-            venv = "env",
-            analysis = {
-                autoSearchPaths = true,
-                useLibraryCodeForTypes = true,
-                diagnosticMode = "workspace",
-            },
-            pythonPath = vim.fn.getcwd() .. "/env/bin/python3"
-        },
+  settings = {
+    python = {
+      pythonPath = python_path,
+      venvPath = venv_root,
+      venv = ".venv",
+      analysis = {
+        autoSearchPaths = true,
+        useLibraryCodeForTypes = true,
+        diagnosticMode = "workspace",
+      },
     },
+  },
 })
 
--- lspconfig.ruff_lsp.setup({
---   on_attach = on_attach,
---   capabilities = capabilities,
---   cmd_env = {
---     PYTHONPATH = vim.fn.getcwd() .. "/env/lib/python3.11/site-packages", -- adjust for your Python version
---   },
--- })
+lspconfig.ruff.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd_env = {
+    PYTHONPATH = python_lib and (python_lib .. "/site-packages") or "",
+  },
+})
+
 
 require("config.mappings")
 require("config.init")

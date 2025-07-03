@@ -24,11 +24,7 @@ opt.termguicolors = true
 opt.timeoutlen = 400
 opt.undofile = true
 
-opt.textwidth = 100
-vim.wo.wrap = true
-vim.cmd(":set textwidth=100")
 vim.cmd(":set colorcolumn=100")
-vim.cmd(":set wrap")
 
 vim.cmd(":set number")
 vim.cmd(":set clipboard=unnamedplus")
