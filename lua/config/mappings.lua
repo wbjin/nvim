@@ -14,15 +14,15 @@ map("v", ">", ">gv")
 map("v", "<leader>y", "*y")
 
 -- NvimTree --
-map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
-map("n", "<leader>e", "<cmd> NvimTreeToggle <CR>")
-map("n", "<leader>a", "ggVG")
-map("n", "<leader>p", "+p")
-map("n", "<C-j>", "20j")
-map("n", "<C-k>", "20k")
-map("v", "K", ":m .-2<CR>==gv")
-map("v", "J", ":m '>+1<CR>==gv")
-map("v", "p", "_dP")
+-- map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
+-- map("n", "<leader>e", "<cmd> NvimTreeToggle <CR>")
+-- map("n", "<leader>a", "ggVG")
+-- map("n", "<leader>p", "+p")
+-- map("n", "<C-j>", "20j")
+-- map("n", "<C-k>", "20k")
+-- map("v", "K", ":m .-2<CR>==gv")
+-- map("v", "J", ":m '>+1<CR>==gv")
+-- map("v", "p", "_dP")
 
 -- Bufferline
 map("n", "<C-w>", ":BufDel<CR>")
@@ -69,3 +69,6 @@ vim.cmd("hi HopNextKey2 guifg=#ff9900")
 -- terminal mode --
 map("t", "<Esc><Esc>", '<Cv-><C-n>')
 vim.api.nvim_set_keymap("t", "<Esc><Esc>", [[<C-\><C-N>]], {noremap=true, silent=true})
+
+-- oil --
+map("n", "<C-n>", "<cmd>Oil<CR>")

@@ -103,5 +103,7 @@ vim.keymap.set({ "n", "t" }, "<leader>tt", function()
     float.toggle()
 end, { desc = "Toggle floating terminal" })
 
+require("oil").setup()
+
 require("config.mappings")
 require("config.init")
