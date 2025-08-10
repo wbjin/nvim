@@ -147,15 +147,15 @@ return {
         --     },
         --   },
         -- },
-        rust_analyzer = {
-            settings = {
-                ["rust-analyzer"] = {
-                    server = {
-                        trace = "off",  -- Options are "off", "error", "warn", "info", "verbose"
-                    },
-                },
-            },
-        },
+        -- rust_analyzer = {
+        --     settings = {
+        --         ["rust-analyzer"] = {
+        --             server = {
+        --                 trace = "off",  -- Options are "off", "error", "warn", "info", "verbose"
+        --             },
+        --         },
+        --     },
+        -- },
       },
 
       -- Ensure the servers and tools above are installed

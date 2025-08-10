@@ -32,9 +32,6 @@ lspconfig.clangd.setup {
         "clangd",
         "-compile-commands-dir=./compile_flags.txt"
     },
-    init_options = {
-        fallbackFlags = {'--std=c++20'}
-    },
 }
 
 lspconfig.gopls.setup({
@@ -90,6 +87,21 @@ lspconfig.ruff.setup({
   },
 })
 
+-- lspconfig.rust_analyzer.setup {
+--     settings = {
+--         ['rust-analyzer'] = {
+--           procMacro = { enable = false },
+--           cargo = { allFeatures = false },
+--           checkOnSave = { command = 'check' },
+--           diagnostics = { experimental = { enable = false } },
+--         },
+--     },
+-- }
+
+local float = require("float")
+vim.keymap.set({ "n", "t" }, "<leader>tt", function()
+    float.toggle()
+end, { desc = "Toggle floating terminal" })
 
 require("config.mappings")
 require("config.init")

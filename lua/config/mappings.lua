@@ -65,3 +65,7 @@ vim.cmd("hi HopNextKey1 guifg=#ff9900")
 vim.cmd("hi HopNextKey2 guifg=#ff9900")
 
 -- LSP --
+
+-- terminal mode --
+map("t", "<Esc><Esc>", '<Cv-><C-n>')
+vim.api.nvim_set_keymap("t", "<Esc><Esc>", [[<C-\><C-N>]], {noremap=true, silent=true})
