@@ -12,7 +12,7 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.mouse = "a"
 
-opt.number = true
+opt.relativenumber = true
 opt.numberwidth = 2
 opt.ruler = false
 
@@ -26,6 +26,5 @@ opt.undofile = true
 
 vim.cmd(":set colorcolumn=100")
 
-vim.cmd(":set number")
 vim.cmd(":set clipboard=unnamedplus")
 vim.cmd(":set mouse=nicr")
