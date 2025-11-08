@@ -14,11 +14,11 @@ map("v", ">", ">gv")
 map("v", "<leader>y", "*y")
 map("v", "K", ":m .-2<CR>==gv")
 map("v", "J", ":m '>+1<CR>==gv")
+map("n", "<leader>a", "ggVG")
 
 -- NvimTree --
 -- map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
 -- map("n", "<leader>e", "<cmd> NvimTreeToggle <CR>")
--- map("n", "<leader>a", "ggVG")
 -- map("n", "<leader>p", "+p")
 -- map("n", "<C-j>", "20j")
 -- map("n", "<C-k>", "20k")

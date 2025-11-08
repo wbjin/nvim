@@ -32,6 +32,9 @@ lspconfig.clangd.setup {
         "clangd",
         "-compile-commands-dir=./compile_flags.txt"
     },
+    init_options = {
+        fallbackFlags = {"-std=c++20"}
+    }
 }
 
 lspconfig.gopls.setup({
@@ -103,7 +106,11 @@ vim.keymap.set({ "n", "t" }, "<leader>tt", function()
     float.toggle()
 end, { desc = "Toggle floating terminal" })
 
-require("oil").setup()
+require("oil").setup({
+    view_options = {
+        show_hidden = true
+    }
+})
 
 require("config.mappings")
 require("config.init")

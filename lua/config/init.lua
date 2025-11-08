@@ -24,6 +24,7 @@ opt.termguicolors = true
 opt.timeoutlen = 400
 opt.undofile = true
 
+vim.cmd(":set number")
 vim.cmd(":set colorcolumn=100")
 
 vim.cmd(":set clipboard=unnamedplus")
