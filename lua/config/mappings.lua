@@ -4,10 +4,10 @@ local opts = {noremap = true, silent = true}
 
 
 -- Movement --
-map("n", "<C-h>", "<C-w>h")
-map("n", "<C-l>", "<C-w>l")
-map("n", "<C-j>", "<C-w>j")
-map("n", "<C-k>", "<C-w>k")
+-- map("n", "<C-h>", "<C-w>h")
+-- map("n", "<C-l>", "<C-w>l")
+-- map("n", "<C-j>", "<C-w>j")
+-- map("n", "<C-k>", "<C-w>k")
 map("n", "df", "<C-t><C-t>")
 map("v", "<", "<gv")
 map("v", ">", ">gv")
@@ -15,6 +15,8 @@ map("v", "<leader>y", "*y")
 map("v", "K", ":m .-2<CR>==gv")
 map("v", "J", ":m '>+1<CR>==gv")
 map("n", "<leader>a", "ggVG")
+map("n", "<C-k>", "20k")
+map("n", "<C-j>", "20j")
 
 -- NvimTree --
 -- map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
