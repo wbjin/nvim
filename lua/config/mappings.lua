@@ -17,6 +17,11 @@ map("v", "J", ":m '>+1<CR>==gv")
 map("n", "<leader>a", "ggVG")
 map("n", "<C-k>", "20k")
 map("n", "<C-j>", "20j")
+map("n", "<C-g>", function()
+    local path = vim.fn.expand("%:p")
+    vim.fn.setreg("+", path)
+    vim.notify(path)
+end, opts)
 
 -- NvimTree --
 -- map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")

@@ -30,10 +30,9 @@ lspconfig.clangd.setup {
     capabilities = capabilities,
     cmd = {
         "clangd",
-        "-compile-commands-dir=./compile_flags.txt"
+        "--enable-config",
+        "--query-driver=/opt/homebrew/opt/llvm/bin/clang++",
     },
-    init_options = {
-    }
 }
 
 lspconfig.gopls.setup({
